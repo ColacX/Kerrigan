@@ -50,7 +50,7 @@ buildscript {
 
 apply plugin: 'com.android.application'
 
-// Crashlytics depends on Fabric
+// Crashalytics depends on Fabric
 // Put Fabric plugin after Android plugin
 apply plugin: 'io.fabric'
 
