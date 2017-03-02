@@ -58,6 +58,7 @@ public class MainActivity extends AppCompatActivity {
         webView.setWebViewClient(new CustomWebViewClient());
 
         webView.loadUrl("file:///android_asset/web/page1.html");
+        //GoogleApiAvailability.makeGooglePlayServicesAvailable();
     }
 
     public void forceCrash(View view) {

@@ -5,7 +5,7 @@ android {
     buildToolsVersion "23.0.3"
     defaultConfig {
         applicationId "com.symbio.kerrigan"
-        minSdkVersion 16
+        minSdkVersion 21
         targetSdkVersion 21
         versionCode 1
         versionName "1.0"
@@ -24,6 +24,8 @@ dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:23.4.0'
+    compile 'com.google.firebase:firebase-messaging:10.2.0'
+
 }
 
 buildscript {
@@ -42,6 +44,8 @@ buildscript {
 }
 
 apply plugin: 'com.android.application'
+
+// Crashlytics depends on Fabric
 // Put Fabric plugin after Android plugin
 apply plugin: 'io.fabric'
 
