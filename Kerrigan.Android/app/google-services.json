@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "541266762860",
+    "firebase_url": "https://kerrigan-4c649.firebaseio.com",
+    "project_id": "kerrigan-4c649",
+    "storage_bucket": "kerrigan-4c649.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:541266762860:android:db5ffcc00919deae",
+        "android_client_info": {
+          "package_name": "com.symbio.kerrigan"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "541266762860-at1n5nm2d70mroqp75iokv96p9m4otq1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.symbio.kerrigan",
+            "certificate_hash": "3a3f4f8701a7d8df17354957273e623cda4e5a90"
+          }
+        },
+        {
+          "client_id": "541266762860-gg718nhh1c78q89eupa2fld6qlismv2c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD_HLvIKHVe1KigCdaOCrVFHtmWEVykCEs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "541266762860-gg718nhh1c78q89eupa2fld6qlismv2c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

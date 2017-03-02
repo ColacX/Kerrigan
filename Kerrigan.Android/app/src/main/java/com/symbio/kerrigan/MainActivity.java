@@ -3,6 +3,7 @@ package com.symbio.kerrigan;
 import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.webkit.WebChromeClient;
 import android.webkit.WebResourceRequest;
@@ -12,6 +13,8 @@ import android.webkit.WebViewClient;
 import android.widget.ImageButton;
 
 import com.crashlytics.android.Crashlytics;
+import com.google.android.gms.common.GoogleApiAvailability;
+import com.google.android.gms.common.GooglePlayServicesUtil;
 
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
@@ -48,9 +51,14 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Log.d("main", "onCreate");
         super.onCreate(savedInstanceState);
         Fabric.with(this, new Crashlytics());
         setContentView(R.layout.activity_main);
+
+        int status = GoogleApiAvailability.getInstance().isGooglePlayServicesAvailable(this);
+        Log.d("main", "Google Play Service Status: " + status);
+        GoogleApiAvailability.getInstance().makeGooglePlayServicesAvailable(this);
 
         final WebView webView = (WebView)findViewById(R.id.webView);
         webView.getSettings().setJavaScriptEnabled(true);
@@ -58,7 +66,6 @@ public class MainActivity extends AppCompatActivity {
         webView.setWebViewClient(new CustomWebViewClient());
 
         webView.loadUrl("file:///android_asset/web/page1.html");
-        //GoogleApiAvailability.makeGooglePlayServicesAvailable();
     }
 
     public void forceCrash(View view) {
