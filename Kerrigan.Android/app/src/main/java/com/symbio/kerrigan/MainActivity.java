@@ -29,18 +29,23 @@ class CustomWebViewClient extends WebViewClient
     {
         String scheme = request.getUrl().getScheme();
         String method = request.getMethod();
+        String url = request.getUrl().toString();
 
-        if (scheme.equals("app")) {
-            InputStream dataStream = new ByteArrayInputStream("app scheme button data".getBytes(StandardCharsets.UTF_8));
-            return new WebResourceResponse("text/html", "utf-8", dataStream);
-        }
+//        if (scheme.equals("app")) {
+//            InputStream dataStream = new ByteArrayInputStream("app scheme button data".getBytes(StandardCharsets.UTF_8));
+//            return new WebResourceResponse("text/html", "utf-8", dataStream);
+//        }
 
-        if (request.getUrl().toString() == "app://home") {
+        if (url.equals("app://home")) {
             //should load the app home page
         }
 
-        if (request.getUrl().toString() == "app://settings") {
+        if (url.equals("app://settings")) {
 
+        }
+
+        if (url.equals("app://crash")) {
+            throw new RuntimeException("This is a forced runtime crash");
         }
 
         return super.shouldInterceptRequest(view, request);
@@ -67,9 +72,4 @@ public class MainActivity extends AppCompatActivity {
 
         webView.loadUrl("file:///android_asset/web/page1.html");
     }
-
-    public void forceCrash(View view) {
-        throw new RuntimeException("This is a crash");
-    }
-
 }
