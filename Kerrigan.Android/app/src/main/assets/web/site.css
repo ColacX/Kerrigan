@@ -1,0 +1,15 @@
+.main-container{
+    background-color: red;
+}
+
+@media (min-width: 400px) {
+    .main-container {
+        background-color: blue;
+    }
+}
+
+.splash-logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
