@@ -30,6 +30,7 @@ class CustomWebViewClient extends WebViewClient
         String scheme = request.getUrl().getScheme();
         String method = request.getMethod();
         String url = request.getUrl().toString();
+        String urlHost = request.getUrl().getHost().toString();
 
 //        if (scheme.equals("app")) {
 //            InputStream dataStream = new ByteArrayInputStream("app scheme button data".getBytes(StandardCharsets.UTF_8));
@@ -58,18 +59,23 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         Log.d("main", "onCreate");
         super.onCreate(savedInstanceState);
+
+        //initialize crashlytics dependency
         Fabric.with(this, new Crashlytics());
+
+        //set activity layout
         setContentView(R.layout.activity_main);
 
+        //check dependency on google play services
         int status = GoogleApiAvailability.getInstance().isGooglePlayServicesAvailable(this);
         Log.d("main", "Google Play Service Status: " + status);
         GoogleApiAvailability.getInstance().makeGooglePlayServicesAvailable(this);
 
+        //initialize web-view
         final WebView webView = (WebView)findViewById(R.id.webView);
         webView.getSettings().setJavaScriptEnabled(true);
         webView.setWebChromeClient(new WebChromeClient());
         webView.setWebViewClient(new CustomWebViewClient());
-
-        webView.loadUrl("file:///android_asset/web/page1.html");
+        webView.loadUrl("file:///android_asset/web/splash.html");
     }
 }

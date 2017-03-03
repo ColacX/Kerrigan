@@ -4,8 +4,11 @@
     <script src="jquery-3.1.1.min.js" type="text/javascript"></script>
     <script>
         $(document).ready(function() {
-            console.log( "ready!" );
             $(".splash-logo").fadeIn(2000);
+
+            setTimeout(function(){
+                window.location.replace("http://page1.html");
+            }, 2000);
         });
     </script>
 </head>
