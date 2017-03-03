@@ -1,27 +1,12 @@
 package com.symbio.kerrigan;
 
-import android.support.v4.app.FragmentActivity;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
-import android.view.View;
 import android.webkit.WebChromeClient;
-import android.webkit.WebResourceRequest;
-import android.webkit.WebResourceResponse;
 import android.webkit.WebView;
-import android.webkit.WebViewClient;
-import android.widget.ImageButton;
-
-import com.crashlytics.android.Crashlytics;
 import com.google.android.gms.common.GoogleApiAvailability;
-import com.google.android.gms.common.GooglePlayServicesUtil;
 import com.google.firebase.messaging.FirebaseMessaging;
-
-import java.io.ByteArrayInputStream;
-import java.io.InputStream;
-import java.nio.charset.StandardCharsets;
-
-import io.fabric.sdk.android.Fabric;
 
 //the first activity that starts
 public class MainActivity extends AppCompatActivity {
@@ -32,9 +17,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         Log.d(TAG, "onCreate");
         super.onCreate(savedInstanceState);
-
-        //initialize crashlytics dependency
-        Fabric.with(this, new Crashlytics());
 
         //set activity layout
         setContentView(R.layout.activity_main);
