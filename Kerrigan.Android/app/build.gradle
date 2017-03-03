@@ -7,8 +7,8 @@ android {
         applicationId "com.symbio.kerrigan"
         minSdkVersion 21
         targetSdkVersion 21
-        versionCode 1
-        versionName "1.0"
+        versionCode 20170303
+        versionName "0.01"
     }
     buildTypes {
         release {
