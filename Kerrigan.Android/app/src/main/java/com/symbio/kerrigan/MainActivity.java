@@ -15,6 +15,7 @@ import android.widget.ImageButton;
 import com.crashlytics.android.Crashlytics;
 import com.google.android.gms.common.GoogleApiAvailability;
 import com.google.android.gms.common.GooglePlayServicesUtil;
+import com.google.firebase.messaging.FirebaseMessaging;
 
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
@@ -24,6 +25,8 @@ import io.fabric.sdk.android.Fabric;
 
 class CustomWebViewClient extends WebViewClient
 {
+    private static final String TAG = "CustomWebViewClient";
+
     @Override
     public WebResourceResponse shouldInterceptRequest(WebView view, WebResourceRequest request)
     {
@@ -54,10 +57,11 @@ class CustomWebViewClient extends WebViewClient
 }
 
 public class MainActivity extends AppCompatActivity {
+    private static final String TAG = "MainActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        Log.d("main", "onCreate");
+        Log.d(TAG, "onCreate");
         super.onCreate(savedInstanceState);
 
         //initialize crashlytics dependency
@@ -68,8 +72,11 @@ public class MainActivity extends AppCompatActivity {
 
         //check dependency on google play services
         int status = GoogleApiAvailability.getInstance().isGooglePlayServicesAvailable(this);
-        Log.d("main", "Google Play Service Status: " + status);
+        Log.d(TAG, "Google Play Service Status: " + status);
         GoogleApiAvailability.getInstance().makeGooglePlayServicesAvailable(this);
+
+        //subscribe to FCM global topic
+        FirebaseMessaging.getInstance().subscribeToTopic("global");
 
         //initialize web-view
         final WebView webView = (WebView)findViewById(R.id.webView);
