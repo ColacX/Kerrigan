@@ -23,7 +23,9 @@ import java.nio.charset.StandardCharsets;
 
 import io.fabric.sdk.android.Fabric;
 
+//the first activity that starts
 public class MainActivity extends AppCompatActivity {
+
     private static final String TAG = "MainActivity";
 
     @Override

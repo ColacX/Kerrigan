@@ -5,6 +5,7 @@ import android.webkit.WebResourceResponse;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
+//intercepts webview messages for special handling
 public class CustomWebViewClient extends WebViewClient
 {
     private static final String TAG = "CustomWebViewClient";

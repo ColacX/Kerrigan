@@ -12,7 +12,9 @@ import android.util.Log;
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
 
+//handles all incoming message from the firebase service
 public class MessagingService extends FirebaseMessagingService {
+
     private static final String TAG = "MessagingService";
     NotificationService notificationService = new NotificationService();
 
