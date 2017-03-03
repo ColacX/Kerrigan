@@ -10,9 +10,9 @@ import android.support.v4.app.NotificationCompat;
 import android.util.Log;
 
 //shows notifications to the user
-public class NotificationService {
+public class NotificationHelper {
 
-    private static final String TAG = "NotificationService";
+    private static final String TAG = "NotificationHelper";
 
     public void showNotification(Context fromContext, String messageBody){
         Log.d(TAG, "showNotification");
