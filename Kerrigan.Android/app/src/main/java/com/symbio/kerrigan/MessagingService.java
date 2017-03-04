@@ -13,21 +13,20 @@ public class MessagingService extends FirebaseMessagingService {
 
     @Override
     public void onMessageReceived(RemoteMessage remoteMessage) {
-        Log.d(TAG, "From: " + remoteMessage.getFrom());
+        Log.d(TAG, "onMessageReceived");
+        String from = remoteMessage.getFrom();
+        String messageType = remoteMessage.getMessageType();
 
         // Check if message contains a data payload.
         if (remoteMessage.getData().size() > 0) {
-            Log.d(TAG, "Message data payload: " + remoteMessage.getData());
+            String messageText = remoteMessage.getData().toString();
+            notificationService.showNotification(this, messageText);
         }
 
         // Check if message contains a notification payload.
         if (remoteMessage.getNotification() != null) {
-            Log.d(TAG, "Message Notification Body: " + remoteMessage.getNotification().getBody());
+            String messageText = remoteMessage.getNotification().getBody().toString();
+            notificationService.showNotification(this, messageText);
         }
-
-        // Also if you intend on generating your own notifications as a result of a received FCM
-        // message, here is where that should be initiated. See showNotification method below.
-        String message = "" + remoteMessage.getNotification().getBody();
-        notificationService.showNotification(this, message);
     }
 }
