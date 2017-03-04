@@ -7,8 +7,8 @@ android {
         applicationId "com.piratpartiet.kerrigan"
         minSdkVersion 14
         targetSdkVersion 21
-        versionCode 3 //very important. do not increment this number too high because that will fuck up the app in the google play app store
-        versionName "0.01 alpha"
+        versionCode 4 //very important. do not increment this number too high because that will fuck up the app in the google play app store
+        versionName "early alpha"
     }
     buildTypes {
         release {
