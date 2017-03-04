@@ -5,6 +5,8 @@ import android.webkit.WebResourceResponse;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
+import com.google.firebase.crash.FirebaseCrash;
+
 //intercepts webview messages for special handling
 public class CustomWebViewClient extends WebViewClient
 {
@@ -32,6 +34,7 @@ public class CustomWebViewClient extends WebViewClient
         }
 
         if (url.equals("app://crash")) {
+            //FirebaseCrash.report(new Exception("My first Android non-fatal error"));
             throw new RuntimeException("This is a forced runtime crash");
         }
 
