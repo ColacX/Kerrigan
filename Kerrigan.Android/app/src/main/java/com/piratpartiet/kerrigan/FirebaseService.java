@@ -1,4 +1,4 @@
-package com.symbio.kerrigan;
+package com.piratpartiet.kerrigan;
 
 import android.util.Log;
 import com.google.firebase.iid.FirebaseInstanceIdService;

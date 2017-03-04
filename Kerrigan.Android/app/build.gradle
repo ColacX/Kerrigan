@@ -4,7 +4,7 @@ android {
     compileSdkVersion 24
     buildToolsVersion '25.0.0'
     defaultConfig {
-        applicationId "com.symbio.kerrigan"
+        applicationId "com.piratpartiet.kerrigan"
         minSdkVersion 21
         targetSdkVersion 21
         versionCode 1 //very important. do not increment this number too high because that will fuck up the app in the google play app store

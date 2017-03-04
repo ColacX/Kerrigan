@@ -8,18 +8,18 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:541266762860:android:db5ffcc00919deae",
+        "mobilesdk_app_id": "1:541266762860:android:7c8bdbf7c57d09d1",
         "android_client_info": {
-          "package_name": "com.symbio.kerrigan"
+          "package_name": "com.piratpartiet.kerrigan"
         }
       },
       "oauth_client": [
         {
-          "client_id": "541266762860-at1n5nm2d70mroqp75iokv96p9m4otq1.apps.googleusercontent.com",
+          "client_id": "541266762860-qu5t28aiiqqmmu9d6j6olvv3idculp1k.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.symbio.kerrigan",
-            "certificate_hash": "3a3f4f8701a7d8df17354957273e623cda4e5a90"
+            "package_name": "com.piratpartiet.kerrigan",
+            "certificate_hash": "8e7f929565f29c498f7c78b2612316914e35e016"
           }
         },
         {

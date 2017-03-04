@@ -1,4 +1,4 @@
-package com.symbio.kerrigan;
+package com.piratpartiet.kerrigan;
 
 import android.webkit.WebResourceRequest;
 import android.webkit.WebResourceResponse;
