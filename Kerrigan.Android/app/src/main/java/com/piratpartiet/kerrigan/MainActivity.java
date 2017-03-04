@@ -6,7 +6,6 @@ import android.util.Log;
 import android.webkit.WebChromeClient;
 import android.webkit.WebView;
 import com.google.android.gms.common.GoogleApiAvailability;
-import com.google.android.gms.tasks.RuntimeExecutionException;
 import com.google.firebase.crash.FirebaseCrash;
 import com.google.firebase.messaging.FirebaseMessaging;
 
