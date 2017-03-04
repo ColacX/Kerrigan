@@ -15,29 +15,35 @@ public class CustomWebViewClient extends WebViewClient
     @Override
     public WebResourceResponse shouldInterceptRequest(WebView view, WebResourceRequest request)
     {
-        String scheme = request.getUrl().getScheme();
-        String method = request.getMethod();
-        String url = request.getUrl().toString();
-        String urlHost = request.getUrl().getHost().toString();
+        try {
 
-//        if (scheme.equals("app")) {
-//            InputStream dataStream = new ByteArrayInputStream("app scheme button data".getBytes(StandardCharsets.UTF_8));
-//            return new WebResourceResponse("text/html", "utf-8", dataStream);
-//        }
+            String scheme = request.getUrl().getScheme();
+            String method = request.getMethod();
+            String url = request.getUrl().toString();
+            String urlHost = request.getUrl().getHost().toString();
 
-        if (url.equals("app://home")) {
-            //should load the app home page
+            //        if (scheme.equals("app")) {
+            //            InputStream dataStream = new ByteArrayInputStream("app scheme button data".getBytes(StandardCharsets.UTF_8));
+            //            return new WebResourceResponse("text/html", "utf-8", dataStream);
+            //        }
+
+            if (url.equals("app://home")) {
+                //should load the app home page
+            }
+
+            if (url.equals("app://settings")) {
+
+            }
+
+            if (url.equals("app://crash")) {
+                throw new RuntimeException("This is a forced runtime crash");
+            }
+
+            return super.shouldInterceptRequest(view, request);
         }
-
-        if (url.equals("app://settings")) {
-
+        catch (Throwable t){
+            FirebaseCrash.report(t);
+            throw t;
         }
-
-        if (url.equals("app://crash")) {
-            //FirebaseCrash.report(new Exception("My first Android non-fatal error"));
-            throw new RuntimeException("This is a forced runtime crash");
-        }
-
-        return super.shouldInterceptRequest(view, request);
     }
 }

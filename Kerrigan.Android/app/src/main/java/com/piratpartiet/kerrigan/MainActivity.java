@@ -6,6 +6,8 @@ import android.util.Log;
 import android.webkit.WebChromeClient;
 import android.webkit.WebView;
 import com.google.android.gms.common.GoogleApiAvailability;
+import com.google.android.gms.tasks.RuntimeExecutionException;
+import com.google.firebase.crash.FirebaseCrash;
 import com.google.firebase.messaging.FirebaseMessaging;
 
 //the first activity that starts
@@ -17,6 +19,14 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         Log.d(TAG, "onCreate");
         super.onCreate(savedInstanceState);
+
+        //setup crash reporting
+        Thread.setDefaultUncaughtExceptionHandler(new Thread.UncaughtExceptionHandler(){
+            @Override
+            public void uncaughtException(Thread thread, Throwable ex) {
+                FirebaseCrash.report(ex);
+            }
+        });
 
         //set activity layout
         setContentView(R.layout.activity_main);
@@ -35,5 +45,7 @@ public class MainActivity extends AppCompatActivity {
         webView.setWebChromeClient(new WebChromeClient());
         webView.setWebViewClient(new CustomWebViewClient());
         webView.loadUrl("file:///android_asset/web/splash.html");
+
+        //throw new RuntimeException("This is a forced runtime exception");
     }
 }
