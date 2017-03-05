@@ -14,7 +14,7 @@ public class NotificationHelper {
 
     private static final String TAG = "NotificationHelper";
 
-    public void showNotification(Context fromContext, String messageText){
+    public void showNotification(Context fromContext, String messageTitle, String messageBody){
         Log.d(TAG, "showNotification");
 
         Intent intent = new Intent(fromContext, MainActivity.class);
@@ -25,8 +25,8 @@ public class NotificationHelper {
         Uri defaultSoundUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
         NotificationCompat.Builder notificationBuilder = new NotificationCompat.Builder(fromContext)
                 .setSmallIcon(R.drawable.ic_notification)
-                .setContentTitle("FCM Message")
-                .setContentText(messageText)
+                .setContentTitle(messageTitle)
+                .setContentText(messageBody)
                 .setAutoCancel(true)
                 .setSound(defaultSoundUri)
                 .setContentIntent(pendingIntent);
