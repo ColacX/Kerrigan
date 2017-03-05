@@ -14,11 +14,13 @@ public class NotificationHelper {
 
     private static final String TAG = "NotificationHelper";
 
-    public void showNotification(Context fromContext, String messageTitle, String messageBody){
+    public void showNotification(Context fromContext, String messageTitle, String messageBody, String jsonData){
         Log.d(TAG, "showNotification");
 
         Intent intent = new Intent(fromContext, MainActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        intent.putExtra("jsonData", jsonData);
+
         PendingIntent pendingIntent = PendingIntent.getActivity(fromContext, 0 /* Request code */, intent,
                 PendingIntent.FLAG_ONE_SHOT);
 
