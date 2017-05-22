@@ -1,10 +1,52 @@
 *{
 	box-sizing:border-box;
-	padding:0;
-	margin:0;
+	padding:0px;
+	margin:0px;
 }
 
 #rootContainer{
 	width:100vw;
 	height:100vh;
 }
+
+.trainRail{
+	width:100%;
+	display:flex;
+	overflow:hidden;
+}
+
+.trainRail input{
+	display:none;
+}
+
+.trainRail .part{
+	transition: 1s all;
+	overflow:hidden;
+}
+
+.trainRail .infront{
+	flex:0;
+	width:0px;
+	background-color:green;
+}
+
+.trainRail .train{
+	background-color:yellow
+}
+
+
+.trainRail .behind{
+	flex:1;
+	width:0px;
+	background-color:blue;
+}
+
+input:checked ~ .infront {
+	flex:1;
+}
+
+input:checked ~ .behind {
+	flex:0;
+}
+
+
