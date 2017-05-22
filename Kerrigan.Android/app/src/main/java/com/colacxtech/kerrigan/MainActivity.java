@@ -1,4 +1,4 @@
-package com.piratpartiet.kerrigan;
+package com.colacxtech.kerrigan;
 
 import android.content.Intent;
 import android.os.Bundle;

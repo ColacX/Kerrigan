@@ -4,10 +4,10 @@ android {
     compileSdkVersion 24
     buildToolsVersion '25.0.0'
     defaultConfig {
-        applicationId "com.piratpartiet.kerrigan"
+        applicationId "com.colacxtech.kerrigan"
         minSdkVersion 14
         targetSdkVersion 21
-        versionCode 4 //very important. do not increment this number too high because that will fuck up the app in the google play app store
+        versionCode 1 //very important. do not increment this number too high because that will fuck up the app in the google play app store
         versionName "early alpha"
     }
     buildTypes {

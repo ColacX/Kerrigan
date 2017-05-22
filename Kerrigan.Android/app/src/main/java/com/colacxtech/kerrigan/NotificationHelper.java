@@ -1,4 +1,4 @@
-package com.piratpartiet.kerrigan;
+package com.colacxtech.kerrigan;
 
 import android.app.NotificationManager;
 import android.app.PendingIntent;

@@ -1,4 +1,4 @@
-package com.piratpartiet.kerrigan;
+package com.colacxtech.kerrigan;
 
 import android.util.Log;
 import com.google.firebase.crash.FirebaseCrash;
