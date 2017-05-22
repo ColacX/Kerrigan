@@ -13,6 +13,7 @@
 	width:100%;
 	display:flex;
 	overflow:hidden;
+	text-align:center;
 }
 
 .trainRail input{
@@ -20,7 +21,7 @@
 }
 
 .trainRail .part{
-	transition: 1s all;
+	transition: 400ms all;
 	overflow:hidden;
 }
 
@@ -33,7 +34,6 @@
 .trainRail .train{
 	background-color:yellow
 }
-
 
 .trainRail .behind{
 	flex:1;
@@ -48,5 +48,3 @@ input:checked ~ .infront {
 input:checked ~ .behind {
 	flex:0;
 }
-
-
