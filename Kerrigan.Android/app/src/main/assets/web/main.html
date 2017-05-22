@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>main</title>
+	<!-- styles -->
+    <link rel="stylesheet" href="main.css"/>
+	
+	<!-- scripts -->
+	<script src="jquery-3.1.1.min.js"></script>
+	<script src="main.js"></script>
+</head>
+<body>
+    <div id="rootContainer">
+        <p>hello from main</p>
+        <p><a href="./page2.html">goto page2</a></p>
+        <p><a href="./splash.html">goto splash</a></p>
+        <p><a href="https://google.com">goto google</a></p>
+        <p><a href="app://test">app scheme test</a></p>
+        <p><a href="app://crash">app crash test</a></p>
+        <script>
+            var w = window.innerWidth;
+            var h = window.innerHeight;
+            document.write("window size" + w + ":" + h);
+        </script>
+    </div>
+</body>

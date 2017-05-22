@@ -16,7 +16,7 @@ import org.json.JSONObject;
 public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = "MainActivity";
-    private String urlToLoad = "file:///android_asset/web/splash.html";
+    private String urlToLoad = "file:///android_asset/web/main.html";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
