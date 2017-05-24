@@ -11,24 +11,18 @@
 	<script src="jquery-3.1.1.min.js"></script>
 	<script src="main.js"></script>
 </head>
-<body>
-    <div id="rootContainer">
-		<label id="xxx" class="trainRail">
-			<input type="checkbox">
-			<div class="infront part">
-				<span>Infront</span>
-			</div>
-			<div class="train part">
-				<span>Train</span>
-			</div>
-			<div class="behind part">
-				<span>Behind</span>
-			</div>
-		</label>
-        <script>
-            var w = window.innerWidth;
-            var h = window.innerHeight;
-            document.write("window size" + w + ":" + h);
-        </script>
-    </div>
+<body id="rootContainer">
+	<audio id="audioPlayer" controls>Your browser does not support the audio element</audio>
+	
+	<label class="trainRail">
+		<input type="checkbox">
+		<div class="infront part">
+			<span>On</span>
+		</div>
+		<div class="train part">
+		</div>
+		<div class="behind part">
+			<span>Off</span>
+		</div>
+	</label>
 </body>
