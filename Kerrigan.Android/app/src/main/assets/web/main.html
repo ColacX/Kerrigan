@@ -4,6 +4,21 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>main</title>
+	<!-- templates -->
+	<template id="switchTemplate">
+<label class="trainRail">
+	<input type="checkbox">
+	<div class="infront part">
+		<span>{{text}}</span>
+	</div>
+	<div class="train part">
+	</div>
+	<div class="behind part">
+		<span>{{text}}</span>
+	</div>
+</label>
+	</template>
+	
 	<!-- styles -->
     <link rel="stylesheet" href="main.css"/>
 	
@@ -14,15 +29,4 @@
 <body id="rootContainer">
 	<h1>Alarm Promises</h1>
 	<audio id="audioPlayer">Your browser does not support the audio element</audio>
-	<label class="trainRail">
-		<input type="checkbox">
-		<div class="infront part">
-			<span>Brush Teeth</span>
-		</div>
-		<div class="train part">
-		</div>
-		<div class="behind part">
-			<span>Brush Teeth</span>
-		</div>
-	</label>
 </body>
