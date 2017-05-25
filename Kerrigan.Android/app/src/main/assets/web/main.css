@@ -7,18 +7,18 @@
 #rootContainer{
 	width:100vw;
 	height:100vh;
+	text-align:center;
+	background-color:black;
+	color:white;
 }
 
 .trainRail{
 	width:100%;
 	display:flex;
 	overflow:hidden;
-	text-align:center;
 	white-space: nowrap;
 	border-radius:15px;
 	border: 2px solid #999999;
-	background-color:#111111;
-	color:white;
 }
 
 .trainRail input{
