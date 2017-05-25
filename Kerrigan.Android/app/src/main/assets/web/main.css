@@ -13,7 +13,6 @@
 }
 
 .trainRail{
-	width:100%;
 	display:flex;
 	overflow:hidden;
 	white-space: nowrap;
@@ -60,4 +59,9 @@ input:checked ~ .behind {
 
 input:checked ~ .train {
 	background-color:green;
+}
+
+.center-h{
+	margin-left: auto;
+	margin-right: auto;
 }
