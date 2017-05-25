@@ -4,6 +4,18 @@ function appendSwitch(buttonText){
 	$(t).appendTo("body");
 }
 
+function startAlarm(){
+	var player = $("#audioPlayer")[0];
+	player.src = "01-second-flight.mp3";
+	player.volume = 0.1
+	player.play();
+}
+
+function stopAlarm(){
+	var player = $("#audioPlayer")[0];
+	player.pause();
+}
+
 $("document").ready(function(){
 	appendSwitch("Wash Face");
 	appendSwitch("Brush Teeths");
@@ -13,12 +25,5 @@ $("document").ready(function(){
 	
 	var w = window.innerWidth;
 	var h = window.innerHeight;
-	$("window size" + w + ":" + h).appendTo("body");
-	var player = $("#audioPlayer")[0];
-	player.src = "01-second-flight.mp3";
-	player.volume = 0.1
-	//player.play();
-	//player.pause();
-	player.currentTime = 0;
-	console.log();
+	$("<span>window size" + w + ":" + h + "</span>").appendTo("body");
 });
